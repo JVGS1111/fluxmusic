@@ -8,6 +8,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .react-router-Link{
             list-style: none;
             text-decoration: none;
@@ -19,13 +20,12 @@ header{
             font-size: 3rem;
             letter-spacing: 2px;
             cursor: pointer;
-
         }
     
         .navBar{
             display: flex;
             list-style-type: none;
-            gap: 10px;
+            gap: 15px;
             font-size: 1.125rem;
             text-transform: uppercase;
     
@@ -35,9 +35,7 @@ header{
                 &:hover{
                     color: var(--pink-500);
                 }
-            }
-    
-           
+            }           
         }
     }
 }
