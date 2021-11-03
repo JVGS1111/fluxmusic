@@ -28,10 +28,10 @@ export function LastNews() {
             .then(res => {
                 let arr: resProps = res.data;
                 setPosts(arr.data);
-                console.log(arr.data);
             }
             )
     }, [])
+
     return (
         <main>
             <h2 className={styles.title}>Last News</h2>
