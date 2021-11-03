@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../api/api';
 import { ArtistsList } from '../../Components/artistsList';
+import { PageTitle } from '../../Components/pageTitle';
 import styles from './styles.module.scss';
 
 interface resProps {
@@ -33,7 +34,8 @@ export function ArtistsPage() {
             )
     }, [])
     return (
-        <main>
+        <main className={styles.container}>
+            <PageTitle title={"Best artists"} />
             <ArtistsList artists={artists} />
         </main>
     )

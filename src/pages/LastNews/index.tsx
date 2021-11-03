@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { api } from "../../api/api"
+import { PageTitle } from "../../Components/pageTitle";
 import { PostsList } from "../../Components/postsList"
 import styles from './styles.module.scss';
 
@@ -33,8 +34,8 @@ export function LastNews() {
     }, [])
 
     return (
-        <main>
-            <h2 className={styles.title}>Last News</h2>
+        <main className={styles.container}>
+            <PageTitle title={"Last News"} />
             <PostsList posts={posts} />
         </main>
     )

@@ -16,7 +16,12 @@ interface dataProps {
 export function ArtistsList({ artists }: artistsListProps) {
     return (
         <div className={styles.container}>
-            <ArtistCard />
+            {
+                artists.map((artist) => (
+                    <ArtistCard key={artist.id} artist={artist} />
+                ))
+            }
+
         </div>
     )
 }
