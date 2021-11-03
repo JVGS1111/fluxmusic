@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { api } from '../../api/api';
+import { ArtistsList } from '../../Components/artistsList';
 import styles from './styles.module.scss';
 
 interface resProps {
@@ -27,11 +28,13 @@ export function ArtistsPage() {
             .then(res => {
                 let arr: resProps = res.data;
                 setArtists(arr.data);
-                console.log(res.data);
+                console.log(res.data);//apagar
             }
             )
     }, [])
     return (
-        <h1>ola</h1>
+        <main>
+            <ArtistsList artists={artists} />
+        </main>
     )
 }
