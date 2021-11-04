@@ -1,5 +1,6 @@
 import { ReleaseCard } from '../releaseCard';
 import styles from './styles.module.scss';
+//caso necessário já está pronto para receber estilização
 
 interface ReleasesListProps {
     releases: dataProps[]

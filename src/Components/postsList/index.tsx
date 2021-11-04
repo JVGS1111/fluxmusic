@@ -1,6 +1,6 @@
 import { Post } from '../post';
 import styles from './styles.module.scss';
-
+//caso necessário já está pronto para receber estilização
 interface PostsListProps {
     posts: dataProps[]
 }
@@ -14,7 +14,7 @@ interface dataProps {
 
 export function PostsList({ posts }: PostsListProps) {
     return (
-        <div className={styles.container}>
+        <div>
             {
                 posts.map((post: dataProps) => (
                     <Post post={post} key={post.id} />

@@ -1,5 +1,4 @@
 import styles from './styles.module.scss';
-import img from '../../assets/artistsImgs/1.jpeg'
 
 interface artistCardProps {
     artist: dataProps

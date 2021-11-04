@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { api } from '../../services/api';
 import { Loading } from '../../Components/loading';
 import styles from './styles.module.scss';
+import { useHistory } from 'react-router-dom';
 
 interface resProps {
     code: number
@@ -25,6 +26,7 @@ export function News() {
     const { id } = useParams<any>();
     const [post, setPost] = useState<dataProps>();
     const [loading, setLoading] = useState(false)
+    let history = useHistory();
 
     function findPost(post: dataProps) {
         if (post.id == id) {
@@ -38,14 +40,19 @@ export function News() {
                 setLoading(true);
                 let arr: resProps = res.data;
                 let newArr = arr.data.filter(findPost);//buscando o post no arr
-                const [obj] = newArr;
-                setPost(obj);
+                if (newArr.length === 0) {
+                    history.push('/404')
+                    //se o post não foi encontrado o usuario é redirecionado para notFound.
+                } else {
+                    const [obj] = newArr;
+                    setPost(obj);
+                }
             }
             )
         setLoading(false);
     }, [id])
 
-    //normalmente eu utilizaria uma query na api para chamar o post que eu quero porém devido as limitações dos endpois fiz uma "gambiarra" para obter o post
+    //normalmente eu utilizaria uma query na api (exemplo abaixo) para chamar o post que eu quero porém devido as limitações dos endpois fiz uma "gambiarra" para obter o post
     //http://api.music-story.com/en/genre/21/news/search?id=10372
     let date;
     if (post) {

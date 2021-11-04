@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { ArtistsPage } from './pages/Artists';
 import { Releases } from './pages/Releases';
 import { News } from './pages/News';
+import { NotFound } from './pages/NotFound';
 
 function App() {
 
@@ -33,7 +34,9 @@ function App() {
           <Releases />
         </Route>
 
-
+        <Route>
+          <NotFound />
+        </Route>
 
       </Switch>
     </Router >
