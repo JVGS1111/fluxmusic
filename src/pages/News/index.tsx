@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import { api } from '../../api/api';
+import { api } from '../../services/api';
 import { Loading } from '../../Components/loading';
 import styles from './styles.module.scss';
 
