@@ -21,6 +21,13 @@
         color: var(--gray-300);
     }
     & + .post{
-        padding-top: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .react-router-Link{
+        list-style: none;
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
     }
 }

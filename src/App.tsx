@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { ArtistsPage } from './pages/Artists';
 import { Releases } from './pages/Releases';
+import { News } from './pages/News';
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
           <LastNews />
         </Route>
 
+        <Route exact path='/news/:id'>
+          <News />
+        </Route>
+
         <Route exact path='/artists'>
           <ArtistsPage />
         </Route>
@@ -28,8 +33,9 @@ function App() {
           <Releases />
         </Route>
 
-      </Switch>
 
+
+      </Switch>
     </Router >
   );
 }

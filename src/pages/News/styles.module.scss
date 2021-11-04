@@ -1,0 +1,38 @@
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+
+    text-align: center;
+    h2{
+        padding-top: 1rem;
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1rem;
+        line-height: 25px;
+    }
+
+    time{
+        font-size: 0.75rem;
+        color: var(--gray-300);
+        
+    }
+
+    .postContent{
+        padding-top: 1.5rem;
+        text-align: justify!important;
+        line-height: 25px;
+        p + p {
+            margin-top: 10px;
+            
+        }
+
+        a{
+            color: var(--pink-500);
+        }
+    }
+}
+

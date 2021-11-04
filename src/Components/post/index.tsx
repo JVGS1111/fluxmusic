@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 interface PostPorps {
@@ -15,10 +17,11 @@ export function Post({ post }: PostPorps) {
 
     const date = new Date(post.date)
 
-
     return (
         <article className={styles.post}>
-            <h2>{post.title}</h2>
+            <Link className={styles.reactRouterLink} to={`/news/${post.id}`}>
+                <h2>{post.title}</h2>
+            </Link>
             <time>{date.toLocaleDateString()}</time>
             <p>{post.subtitle}</p>
         </article>

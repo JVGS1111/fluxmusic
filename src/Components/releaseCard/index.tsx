@@ -16,8 +16,8 @@ interface dataProps {
 
 export function ReleaseCard({ release }: ReleaseCardProps) {
 
-    const dateSplited = release.release_date.split('-')
-    const dataFormated = dateSplited[0]
+    const dateSplited = release.release_date.split('-')//separa ano/dia/mes
+    const dataFormated = dateSplited[0]//ANO
 
     return (
         <div className={styles.card}>

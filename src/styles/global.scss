@@ -55,3 +55,16 @@ a{
     color: inherit;
     text-decoration: none;
 }
+
+
+.containerLoading{
+    cursor:default;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
