@@ -32,7 +32,6 @@ export function ArtistsPage() {
                 setLoading(true)
                 let arr: resProps = res.data;
                 setArtists(arr.data);
-                console.log(res.data);//apagar
             }
             )
         setLoading(false)
