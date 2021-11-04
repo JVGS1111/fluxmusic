@@ -3,6 +3,7 @@ import { LastNews } from './pages/LastNews';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { ArtistsPage } from './pages/Artists';
+import { Releases } from './pages/Releases';
 
 function App() {
 
@@ -21,6 +22,10 @@ function App() {
 
         <Route exact path='/artists'>
           <ArtistsPage />
+        </Route>
+
+        <Route exact path='/releases'>
+          <Releases />
         </Route>
 
       </Switch>
