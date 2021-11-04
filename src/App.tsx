@@ -41,3 +41,5 @@ function App() {
 }
 
 export default App;
+
+//implementar amanha: barra de busca, localstorage para paginas
